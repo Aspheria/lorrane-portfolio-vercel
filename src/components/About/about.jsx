@@ -47,9 +47,8 @@ const about = () => {
                 I'm a Front-end and a Blockchain Developer graduated in Data Science and <br/>I'm working on some side projects, learning a couple new skills, reading some Lovecraft books.{" "}
                 </li>
                 <li>
-                  <span>Have strong communication skills</span> to have worked a
-                  customer service as a technical support specialist for 2 years
-                  and trained more than 80 employees.
+                  <span>Experienced tech professional leading adoption of new methods/tools for 
+                    agile efficiency/productivity. </span> Training in Data Science. Skilled in IoT/Big Data projects, data analysis, and teamwork.
                 </li>
                 <li>
                   <span>

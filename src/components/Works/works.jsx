@@ -12,6 +12,8 @@ import {
 import youtube from "../../images/youtube.jpg";
 import WorkCard from "../WorkCard/WorkCard";
 import email from "../../images/email.jpg"
+import pokemon from "../../images/pokemon.jpg"
+
 
 const Works = () => {
   return (
@@ -56,7 +58,20 @@ const Works = () => {
                 image={email}
               />
             </div>
-            
+            <div className={work3}>
+              <WorkCard
+                worktitle={"Pokedex"}
+                details={
+                  "An pokedex linked with the Pokemon Api"
+                }
+                tool={"Angular"}
+                tool2={"Sass"}
+                tool3={"Http Interector"}
+                github={"https://github.com/Aspheria/pokemon-angular"}
+                link={"https://pokemon-angular-eta.vercel.app/"}
+                image={pokemon}
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -70,7 +70,8 @@ const Works = () => {
                 github={"https://github.com/Aspheria/pokemon-angular"}
                 link={"https://pokemon-angular-eta.vercel.app/"}
                 image={pokemon}
-                
+
+
               />
             </div>
           </div>

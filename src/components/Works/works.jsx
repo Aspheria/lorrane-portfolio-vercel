@@ -6,6 +6,7 @@ import {
   subTitle,
   work1,
   work2,
+  work3,
   bg,
 } from "./works.module.scss";
 

@@ -1,0 +1,39 @@
+@use "../../styles/mixin.scss" as mixin;
+
+.header {
+  width: 100%;
+  border-bottom: 0.8px solid mixin.$primary-font-color;
+  @include mixin.flexLayout;
+  display: flex;
+  height: 10vh;
+  margin: 0 auto;
+  padding: 16px;
+  justify-content: space-between;
+  font-size: mixin.$font-size-h2;
+}
+.ul {
+  align-items: center;
+  display: flex;
+}
+
+.li {
+  margin-left: 1.6rem;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  padding-bottom: 0;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.35s ease;
+  }
+}
+
+.btn {
+  @include mixin.mainBtn;
+}
+
+.mobileNav {
+  @include mixin.tablet {
+    display: none;
+  }
+}

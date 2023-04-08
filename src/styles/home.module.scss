@@ -1,0 +1,82 @@
+// mixinをここで読み込む
+@use "../styles/mixin.scss" as mixin;
+
+.container {
+  height: 90vh;
+}
+
+.bg {
+  height: 90%;
+  position: relative;
+}
+
+.main {
+  z-index: -1;
+  background-color: mixin.$secondary-bg-color;
+  clip-path: polygon(100% 0, 100% 60%, 0 89%, 0 0);
+  height: 100%;
+
+  .mainBg {
+    height: 100%;
+    display: none;
+    background-color: mixin.$accent-bg-color;
+    clip-path: polygon(100% 0, 100% 73%, 16% 96%, 48% 88%, 75% 0);
+    @include mixin.tablet {
+      display: block;
+    }
+  }
+}
+
+.mainText {
+  @include mixin.textStyles;
+  @include mixin.centering(35%);
+  z-index: 3;
+  width: 65%;
+  text-align: center;
+}
+.mainText h1 {
+  font-size: 4rem;
+  @include mixin.tablet {
+    font-size: 8rem;
+  }
+}
+.mainText h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  @include mixin.tablet {
+    font-size: 4.5rem;
+  }
+}
+
+.btn {
+  justify-content: center;
+  margin: 24px auto 0;
+  @include mixin.mainBtn;
+  z-index: 10;
+}
+
+.arrow {
+  height: 10%;
+  animation: float 3s ease-in-out infinite;
+  @include mixin.textStyles(none);
+
+  @keyframes float {
+    0% {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(36%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+}
+
+.downArrow {
+  margin: 0 auto;
+  justify-content: center;
+  width: 10%;
+  display: block;
+  text-align: center;
+}

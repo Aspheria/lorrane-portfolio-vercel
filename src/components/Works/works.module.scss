@@ -1,0 +1,75 @@
+@use "../../styles/mixin.scss" as mixin;
+
+.title {
+  justify-content: center;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+
+  h1 {
+    margin: 56px auto;
+    font-size: mixin.$font-size-h1;
+  }
+}
+
+.container {
+  padding-bottom: 56px;
+  margin: 0 auto;
+  width: 90%;
+}
+///////////////////////////////
+.bg {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  background-color: mixin.$secondary-bg-color;
+}
+
+.subTitle {
+  padding: 32px;
+  font-size: mixin.$font-size-p;
+  text-align: center;
+  font-family: mixin.$second-font-stack;
+}
+
+/////
+
+.cardWrapper {
+  height: 450px;
+}
+
+.rowWrapper {
+  @include mixin.desktop {
+    display: flex;
+    justify-content: center;
+    margin-top: 52px;
+
+    .cardWrapper {
+      margin: 0;
+    }
+    .work1 {
+      min-width: 60%;
+    }
+    .work2 {
+      margin-left: 40px;
+    }
+    .work3 {
+      // margin-right: 40px;
+      width: 45%;
+      margin-right: 3%;
+    }
+    .work4 {
+      width: 52%;
+      // min-width: 60%;
+    }
+    .work5 {
+      min-width: 60%;
+    }
+    .work6 {
+      margin-left: 40px;
+    }
+  }
+}
+
+.btn {
+  @include mixin.mainBtn;
+}

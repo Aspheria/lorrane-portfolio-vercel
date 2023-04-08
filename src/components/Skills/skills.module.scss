@@ -1,0 +1,109 @@
+@use "../../styles/mixin.scss" as mixin;
+
+.title {
+  justify-content: center;
+  width: 80%;
+  text-align: center;
+  margin: 52px auto;
+}
+
+.subTitle {
+  padding: 32px;
+  font-size: mixin.$font-size-p;
+  text-align: center;
+  font-family: mixin.$second-font-stack;
+}
+
+.h1 {
+  padding: 16px;
+  font-size: mixin.$font-size-h1;
+}
+
+.bg {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  background-color: mixin.$secondary-bg-color;
+}
+
+.container {
+  margin: 0 auto;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  width: 90%;
+
+  @include mixin.desktop {
+    padding: 0;
+    height: 90vh;
+    display: flex;
+    width: 80%;
+  }
+}
+
+/////////////////
+
+.headline {
+  justify-content: center;
+  width: 160px;
+  text-align: center;
+  margin: 32px auto 6px;
+  border-radius: 8px;
+  padding: 0px 8px;
+
+  @include mixin.textStyles;
+  font-size: mixin.$font-size-h3;
+
+  @include mixin.desktop {
+    padding: 36px 8px;
+  }
+}
+
+.headline .stripe {
+  width: auto;
+  border-radius: 8px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #f4c2c1,
+    #f4c2c1 2px,
+    white 2px,
+    white 4px
+  );
+}
+
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.812);
+  width: 60%;
+  justify-content: center;
+  margin: 10% auto;
+  border-radius: 16px;
+  padding: 2px 0;
+}
+
+.skillsList {
+  @include mixin.flexLayout;
+  padding: 0;
+  justify-content: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+
+  @include mixin.desktop {
+    height: auto;
+  }
+
+  li {
+    margin-top: 24px;
+    margin-left: 32px;
+    margin-right: 32px;
+    text-align: center;
+
+    p {
+      padding: 6px 0;
+      font-family: mixin.$second-font-stack;
+
+    }
+    span {
+      color: #dca0a2;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+  }
+}

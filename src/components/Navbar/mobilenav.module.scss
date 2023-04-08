@@ -1,0 +1,67 @@
+@use "../../styles/mixin.scss" as mixin;
+
+.ul {
+  display: flex;
+  flex-direction: column;
+  padding: 15%;
+}
+
+.li {
+  font-size: mixin.$font-size-h3;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  padding-bottom: 0;
+  margin-top: 24px;
+  &::hover {
+    opacity: 0.8;
+    transition: 0.35s ease;
+  }
+}
+
+.btn {
+  @include mixin.mainBtn(#fff);
+  width: 150px;
+  margin: 24px auto;
+  justify-content: center;
+  :hover {
+    opacity: 0.8;
+    transition: 0.35s ease;
+  }
+}
+
+.navEl {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.mobileBg {
+  position: absolute;
+  background-color: mixin.$accent-color;
+  top: 10vh;
+  right: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 15;
+}
+
+.mobile {
+  @include mixin.flexLayout;
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  font-size: mixin.$font-size-h2;
+  @include mixin.tablet {
+    display: none;
+  }
+}
+
+.logo {
+  width: 50px;
+  height: 66px;
+}
